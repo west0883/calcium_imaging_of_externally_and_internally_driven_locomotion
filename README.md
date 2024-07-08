@@ -1,0 +1,1 @@
+Code for the analysis conducted in  West et al, (Preprint). "Wide-field calcium imaging of cortical activation and functional connectivity in externally- and internally-driven locomotion." DOI: 10.1101/2023.04.10.536261
