@@ -6,20 +6,18 @@
 % code abstractable across users with different data division levels.
 
 % Inputs:
-% loop_list - a cell array (? will maybe make a Map or something later, but order is immportant)
+% loop_list - a cell array 
 % with information about each level to loop, where list of data for each
 % loop can be found, what iterator to use (important for finding data the next level down)
 % and when to load or save data in relation to those loops. 
 % Ex. loop_list.iterators = {
-%      'mouse', 'mice_all(:).name',' mousei'; 
-%      'day', 'mice_all(mousei).days(:).name'; 'dayi';
-%      'stack', 'mice_all(mousei).days(dayi).stacks', 'stacki';
-%     loop_list.load_level = 'stack';
-%     loop_list.save_level = 'stack';
+%      'mouse', {'loop_variables.mice_all(:).name'}, 'mouse_iterator'; 
+%      'day', {'loop_variables.mice_all(mousei).days(:).name'}; 'day_iterator';
+%      'stack', '{loop_variables.mice_all(mousei).days(dayi).stacks'}, 'stack_iterator';
 
-% Things that need to be loaded, ex.
-% loop_list.things_to_load.data.load_level = 'stack'; 
-
+% Things that need to be loaded and saved, Ex.
+% loop_list.things_to_load.example_variable.level = 'stack';
+% loop_list.things_to_save.porcessed_example_variable.level = 'stack';
 
 % loop_variables -- a structure of the variables
 % where the list of data for each can be found (Ex above would be
